@@ -16,7 +16,7 @@ const NAVIGATION: NavigationInterface[] = [
 const NavigationItems = () => {
   return (
     <nav>
-      <ul className="font-semibold text-xl flex flex-col gap-6 items-center text-secondary-gray-400">
+      <ul className="font-semibold xl:text-xl text-md flex flex-col gap-4 xl:gap-6 items-center text-secondary-gray-400">
         {NAVIGATION.map((item) => (
           <NavigationListItems key={item.id} item={item} />
         ))}

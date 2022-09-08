@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
-import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import Paragraph from "../components/Home/Paragraph";
 
 const Home: NextPage = () => {
   return (
     <div className="">
       <div className="flex gap-32 h-screen">
-        <div className="mt-20 ml-32 w-1/2">
-          <h1 className="text-secondary-gray-400 text-8xl font-bold leading-relaxed">
+        <div className="mt-20 pl-24 xl:pl-32 w-1/2">
+          <h1 className="text-secondary-gray-400 text-6xl xl:text-8xl font-bold leading-relaxed xl:leading-relaxed">
             <span className="">
               Hi!
               <br />
@@ -16,15 +18,17 @@ const Home: NextPage = () => {
               <span className="text-primary-blue-400">.</span>
             </span>
           </h1>
-          <h2 className="text-3xl font-semibold text-secondary-gray-400 mr-64 leading-relaxed mt-16">
-            Full-stack Developer with main focus on front-end part - buildind
-            apps with <span className="text-primary-blue-400">React</span>, but
-            I also like to dive into other tehnologies like
-            <TypeAnimation
-              sequence={["NodeJS", 1000, "Two", 1000, "Three", 1000]}
-              repeat={Infinity}
-            />
-          </h2>
+          <Paragraph />
+          <div className="pt-16">
+            <Link href={"/about"}>
+              <button className="flex items-center gap-3 py-2 px-4 bg-secondary-gray-200 border-2 border-primary-blue-400 rounded-md">
+                <span className="font-semibold">VIEW PORTFOLIO</span>
+                <span>
+                  <BsFillBriefcaseFill className="fill-primary-blue-400 w-4 h-4" />
+                </span>
+              </button>
+            </Link>
+          </div>
         </div>
         <div className="self-center">Cube</div>
       </div>
