@@ -22,12 +22,17 @@ const MotoSection: React.FC<MotoSectionProps> = ({ children }) => {
             has a solution.
           </p>
           <p className="pt-2">
-            My name is <span className="text-black">Ivan</span> and I am{" "}
-            <span className="text-black">Front-end Developer</span> with main
-            focus on <span className="text-black">React</span> library. Although
-            I mostly work with React and NextJS I like to dive into Back-end
-            Development too. After a few years working as a Project Manager I
-            have decided to start my own company and work as a contractor.
+            My name is <span className="text-black dark:text-white">Ivan</span>{" "}
+            and I am{" "}
+            <span className="text-black dark:text-white">
+              Front-end Developer
+            </span>{" "}
+            with main focus on{" "}
+            <span className="text-black dark:text-white">React</span> library.
+            Although I mostly work with React and NextJS I like to dive into
+            Back-end Development too. After a few years working as a Project
+            Manager I have decided to start my own company and work as a
+            contractor.
           </p>
         </div>
       </section>

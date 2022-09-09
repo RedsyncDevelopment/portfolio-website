@@ -15,5 +15,5 @@
 }
 
 .tehnologyIcon {
-  @apply w-6 h-6 text-black;
+  @apply w-6 h-6 text-black dark:text-white;
 }

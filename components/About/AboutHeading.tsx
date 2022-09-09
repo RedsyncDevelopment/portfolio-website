@@ -5,7 +5,7 @@ const AboutHeading = () => {
         Let me tell you
         <br />
         more{" "}
-        <span className="text-black text-5xl sm:text-6xl md:text-8xl">
+        <span className="text-black dark:text-white text-5xl sm:text-6xl md:text-8xl">
           ABOUT
         </span>{" "}
         me

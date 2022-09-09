@@ -34,10 +34,10 @@ const MobileNavigation = () => {
             <BiCube className="w-6 h-6" />
           </span>
           <span>to open</span>
-          <span className="text-black">MENU</span>
+          <span className="text-black dark:text-white">MENU</span>
         </p>
         <button
-          className="absolute right-1 top-1 w-16 h-16 sm:w-20 sm:h-20 sm:right-10 md:top-4"
+          className="absolute right-1 top-1 w-16 h-16 sm:w-20 sm:h-20 sm:right-10 md:top-4 z-50"
           onClick={handleOpen}
         >
           <Canvas camera={{ position: [0, 0, 4] }} flat>
@@ -45,7 +45,7 @@ const MobileNavigation = () => {
           </Canvas>
         </button>
         {isOpen && (
-          <div className="w-screen h-screen fixed top-0 left-0 bg-secondary-gray-200 z-[100000]">
+          <div className="w-screen h-screen fixed top-0 left-0 bg-secondary-gray-200 dark:bg-secondary-gray-700 z-[100000]">
             <button onClick={handleClose} className="absolute top-0 right-0">
               <AiFillCloseSquare className="w-8 h-8 fill-primary-blue-200" />
             </button>

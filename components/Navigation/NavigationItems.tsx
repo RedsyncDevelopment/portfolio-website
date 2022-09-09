@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { NavigationInterface } from "../../types";
+import ThemeToggler from "../UI/ThemeToggler";
 import NavigationListItems from "./NavigationListItems";
 
 const NAVIGATION: NavigationInterface[] = [
@@ -15,13 +16,16 @@ const NAVIGATION: NavigationInterface[] = [
 
 const NavigationItems = () => {
   return (
-    <nav>
-      <ul className="font-semibold xl:text-xl text-md flex flex-col gap-4 xl:gap-6 items-center text-secondary-gray-400">
-        {NAVIGATION.map((item) => (
-          <NavigationListItems key={item.id} item={item} />
-        ))}
-      </ul>
-    </nav>
+    <div className="flex flex-col gap-4 xl:gap-6 items-center">
+      <nav>
+        <ul className="font-semibold xl:text-xl text-md flex flex-col gap-4 xl:gap-6 items-center text-secondary-gray-400">
+          {NAVIGATION.map((item) => (
+            <NavigationListItems key={item.id} item={item} />
+          ))}
+        </ul>
+      </nav>
+      <ThemeToggler />
+    </div>
   );
 };
 

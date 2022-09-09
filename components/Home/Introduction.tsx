@@ -16,14 +16,14 @@ const Introduction: React.FC<IntroductionProps> = ({ children }) => {
           <br />
         </span>
         <span>
-          I&apos;m <span className="text-black">Ivan</span>
+          I&apos;m <span className="text-black dark:text-white">Ivan</span>
           <span className="text-primary-blue-400">.</span>
         </span>
       </h1>
       <Paragraph />
 
       <Link href="/work">
-        <button className="flex items-center gap-3 py-2 px-4 bg-secondary-gray-200 border-2 border-primary-blue-400 rounded-md">
+        <button className="flex items-center gap-3 py-2 px-4 bg-secondary-gray-200 dark:bg-secondary-gray-700 border-2 border-primary-blue-400 rounded-md">
           <span className="font-semibold">VIEW PORTFOLIO</span>
           <span>
             <BsFillBriefcaseFill className="fill-primary-blue-400 w-4 h-4" />
