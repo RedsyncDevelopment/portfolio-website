@@ -10,9 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <main className={!isMobile ? "absolute left-80 xl:left-[30rem]" : ""}>
-        {children}
-      </main>
+      <main className={`${isMobile ? "w-screen" : "w-3/4"}`}>{children}</main>
     </>
   );
 };

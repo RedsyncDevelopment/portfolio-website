@@ -5,7 +5,7 @@ import NavigationItems from "./NavigationItems";
 const DesktopNavigation = () => {
   return (
     <>
-      <div className="w-80 xl:w-[30rem] h-screen fixed top-0 left-0 bg-secondary-gray-200 py-14 overflow-auto">
+      <div className="h-screen fixed w-1/4 top-0 left-0 bg-secondary-gray-200 py-14 overflow-auto">
         <div className="flex flex-col items-center xl:gap-14 gap-10">
           <div className="xl:w-40 xl:h-40 w-32 h-32 flex items-center justify-center relative border-2 border-primary-blue-400 rounded-full">
             <Image

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply !scrollbar-hide;
+  }
+}
+
+@layer components {
+  .heading3 {
+    @apply text-lg md:text-2xl font-bold text-primary-blue-400;
+  }
+}
+
+.tehnologyIcon {
+  @apply w-6 h-6 text-black;
+}

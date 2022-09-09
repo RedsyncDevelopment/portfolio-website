@@ -6,10 +6,12 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navigation />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <div className="flex flex-col lg:flex-row flex-grow w-full ">
+        <Navigation />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
     </>
   );
 }
