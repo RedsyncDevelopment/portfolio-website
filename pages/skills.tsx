@@ -1,9 +1,9 @@
 import { NextPage } from "next";
 import { ReactNode, useRef } from "react";
-import HobbiesSection from "../components/About/HobbiesSection";
 import PageLayout from "../components/Layout/PageLayout";
 import SectionLayout from "../components/Layout/SectionLayout";
 import DigitalSkills from "../components/Skills/DigitalSkills";
+import LanguageSkills from "../components/Skills/LanguageSkills";
 import SkillsHeading from "../components/Skills/SkillsHeading";
 import CubeOtherPages from "../components/UI/CubeOtherPages";
 import Splitter from "../components/UI/Splitter";
@@ -30,7 +30,7 @@ const Skills: NextPage<SkillsProps> = ({ children }) => {
       </SectionLayout>
       <div ref={languageRef} className="pb-16">
         <SectionLayout>
-          <HobbiesSection />
+          <LanguageSkills />
         </SectionLayout>
       </div>
     </PageLayout>

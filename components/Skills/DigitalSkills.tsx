@@ -9,7 +9,7 @@ interface DigitalSkillsProps {
 
 const DigitalSkills: React.FC<DigitalSkillsProps> = ({ children }) => {
   return (
-    <section className="2xl:pr-72">
+    <section className="2xl:pr-60">
       <h3 className="heading3">DIGITAL SKILLS:</h3>
       <SectionWrapper
         paragraphNumber="01"
