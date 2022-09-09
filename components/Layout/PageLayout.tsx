@@ -10,7 +10,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
     <div className="relative">
       {children}
       <button
-        className="fixed right-5 bottom-5 md:right-10 md:bottom-10 animate-bounce"
+        className="fixed right-5 bottom-5 md:right-10 md:bottom-10 animate-bounce dark:bg-secondary-gray-700"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
