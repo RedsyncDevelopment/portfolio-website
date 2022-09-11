@@ -1,6 +1,7 @@
 import { AiOutlineLineChart } from "react-icons/ai";
+import { BsHexagonFill } from "react-icons/bs";
 import { FaFileExcel, FaFilePowerpoint, FaFileWord } from "react-icons/fa";
-
+import { ImPencil2 } from "react-icons/im";
 import {
   SiBlender,
   SiFigma,
@@ -34,7 +35,7 @@ export const TEHNOLOGIES_LIST = [
     name: "Graphic Design",
     skills: [
       { name: "GIMP", icon: <SiGimp className="tehnologyIcon" /> },
-      { name: "CorelDraw", icon: "" },
+      { name: "CorelDraw", icon: <ImPencil2 className="tehnologyIcon" /> },
       { name: "Blender", icon: <SiBlender className="tehnologyIcon" /> },
       { name: "Figma", icon: <SiFigma className="tehnologyIcon" /> },
     ],
@@ -44,7 +45,7 @@ export const TEHNOLOGIES_LIST = [
     skills: [
       {
         name: "Bizagi Modeler",
-        icon: "",
+        icon: <BsHexagonFill className="tehnologyIcon" />,
       },
       { name: "IBM WebSphere", icon: <SiIbm className="tehnologyIcon" /> },
     ],
