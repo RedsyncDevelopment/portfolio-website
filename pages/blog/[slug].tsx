@@ -1,5 +1,5 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import PageLayout from "../../components/Layout/PageLayout";
@@ -14,8 +14,6 @@ const BlogPost: NextPage<BlogPostProps> = (props) => {
 
   const { data, isLoading } = useQuery(["post"], () => fetchPost(query.slug));
 
-  console.log(data);
-
   return (
     <PageLayout>
       <div>Test</div>
@@ -25,13 +23,13 @@ const BlogPost: NextPage<BlogPostProps> = (props) => {
 
 export default BlogPost;
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await fetchAllPosts();
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: false,
   };
-}
+};
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryClient = new QueryClient();

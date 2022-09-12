@@ -1,5 +1,5 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
-import { NextPageContext } from "next";
+import { GetStaticProps } from "next";
 import React from "react";
 import { fetchAllPosts } from "../../utils/constants";
 import PostWrapper from "./PostWrapper";
@@ -23,8 +23,7 @@ const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
   );
 };
 
-export async function getStaticProps(context: NextPageContext) {
-  console.log(context);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery(["posts"], () => fetchAllPosts());
   return {
@@ -32,6 +31,6 @@ export async function getStaticProps(context: NextPageContext) {
       dehydratedState: dehydrate(queryClient),
     },
   };
-}
+};
 
 export default BlogPosts;

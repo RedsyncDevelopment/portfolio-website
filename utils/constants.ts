@@ -1,6 +1,7 @@
-export const publicURL = process.env.PUBLIC_URL;
 import { gql, request } from "graphql-request";
 import { Post, Posts } from "../types";
+
+export const publicURL = process.env.PUBLIC_URL;
 
 const POSTS_QUERY = gql`
   query GetAllPosts {
