@@ -46,7 +46,7 @@ const MobileNavigation = () => {
         </button>
         {isOpen && (
           <div className="w-screen h-screen fixed top-0 left-0 bg-secondary-gray-200 dark:bg-secondary-gray-700 z-[100000]">
-            <button onClick={handleClose} className="absolute top-0 right-0">
+            <button onClick={handleClose} className="absolute top-2 right-2">
               <AiFillCloseSquare className="w-8 h-8 fill-primary-blue-200" />
             </button>
             <div className="pt-14">

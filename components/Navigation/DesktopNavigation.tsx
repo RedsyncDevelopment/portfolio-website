@@ -21,7 +21,7 @@ const DesktopNavigation = () => {
               Ivan Horvat
             </span>
             <span className="text-md xl:text-xl text-primary-blue-400">
-              Full-stack Developer
+              Front-end Developer
             </span>
             <span className="text-secondary-gray-400 xl:text-md text-sm">
               Croatia (Europe)
