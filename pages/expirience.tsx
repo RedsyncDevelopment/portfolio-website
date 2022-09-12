@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { ReactNode } from "react";
-import EducationHeading from "../components/Education/EducationHeading";
-import EducationHistory from "../components/Education/EducationHistory";
+import ExpirienceHeading from "../components/Expirience/ExpirienceHeading";
+import ExpirienceHistory from "../components/Expirience/ExpirienceHistory";
 import PageLayout from "../components/Layout/PageLayout";
 import SectionLayout from "../components/Layout/SectionLayout";
 import CubeOtherPages from "../components/UI/CubeOtherPages";
@@ -17,12 +17,12 @@ const Expirience: NextPage<ExpirienceProps> = ({ children }) => {
   return (
     <PageLayout>
       <SectionLayout>
-        <EducationHeading />
+        <ExpirienceHeading />
         {!isMobile && <CubeOtherPages />}
       </SectionLayout>
       <div className="pb-16">
         <SectionLayout>
-          <EducationHistory />
+          <ExpirienceHistory />
         </SectionLayout>
       </div>
     </PageLayout>
