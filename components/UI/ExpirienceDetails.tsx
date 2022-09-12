@@ -1,4 +1,5 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import { FaBuilding, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 interface ExpirienceDetailsProps {
   yearsSpan: string;
@@ -9,6 +10,16 @@ interface ExpirienceDetailsProps {
   linkHref?: string;
   linkDescription?: string;
 }
+
+interface WrapperDivInterface {
+  children: ReactNode;
+}
+
+const WrapperDiv: React.FC<WrapperDivInterface> = ({ children }) => {
+  return (
+    <div className="flex flex-col md:flex-row gap-4 px-4 py-2">{children}</div>
+  );
+};
 
 const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
   yearsSpan,
@@ -25,18 +36,33 @@ const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
         <time>{yearsSpan}</time>
         <h3 className="text-primary-blue-400">{heading}</h3>
       </div>
-      <div>
-        <h4 className="flex gap-2">
-          <span>{companyType}: </span>
+      <div className="flex flex-col">
+        <WrapperDiv>
+          <div className="flex gap-2 items-center">
+            <span>
+              <FaBuilding />
+            </span>
+            <span>{companyType}: </span>
+          </div>
           <span>{companyName}</span>
-        </h4>
-        <div className="flex gap-2">
-          <span>Address: </span>
+        </WrapperDiv>
+        <WrapperDiv>
+          <div className="flex gap-2 items-center">
+            <span>
+              <FaEnvelope />
+            </span>
+            <span>Address: </span>
+          </div>
           <address>{address}</address>
-        </div>
+        </WrapperDiv>
         {!!linkHref && (
-          <div>
-            <span>Website: </span>
+          <WrapperDiv>
+            <div className="flex gap-2 items-center">
+              <span>
+                <FaGlobe />
+              </span>
+              <span>Website: </span>
+            </div>
             <a
               target="_blank"
               href={linkHref}
@@ -45,7 +71,7 @@ const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
             >
               {linkDescription}
             </a>
-          </div>
+          </WrapperDiv>
         )}
       </div>
     </div>
