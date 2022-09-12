@@ -23,6 +23,8 @@ const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
   );
 };
 
+export default BlogPosts;
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery(["posts"], () => fetchAllPosts());
@@ -32,5 +34,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
-
-export default BlogPosts;

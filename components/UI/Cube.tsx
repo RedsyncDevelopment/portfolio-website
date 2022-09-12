@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { Mesh } from "three";
 import { TextureLoader } from "three/src/loaders/TextureLoader.js";
