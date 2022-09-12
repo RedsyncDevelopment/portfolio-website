@@ -4,19 +4,21 @@ export interface NavigationInterface {
   link: string;
 }
 
-export interface Posts {
-  node: {
-    category: {
-      name: string;
-    };
-    createdAt: string;
-    excerpt: string;
-    featuredImage: {
-      url: string;
-    };
-    slug: string;
-    title: string;
+export interface PostNode {
+  category: {
+    name: string;
   };
+  createdAt: string;
+  excerpt: string;
+  featuredImage: {
+    url: string;
+  };
+  slug: string;
+  title: string;
+}
+
+export interface Posts {
+  node: PostNode;
 }
 
 export interface Post {

@@ -17,7 +17,7 @@ const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
   return (
     <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
       {data?.map(({ node: post }) => (
-        <PostWrapper key={post.title} title={post.title} slug={post.slug} />
+        <PostWrapper key={post.title} post={post} />
       ))}
     </div>
   );
