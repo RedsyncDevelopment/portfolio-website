@@ -22,24 +22,26 @@ export interface Posts {
 }
 
 export interface Post {
-  author: {
-    name: string;
-  };
-
-  category: {
-    name: string;
-  };
-  content?: {
-    raw: {
-      children: any;
+  post: {
+    author: {
+      name: string;
     };
+
+    category: {
+      name: string;
+    };
+    content?: {
+      raw: {
+        children: any;
+      };
+    };
+    createdAt: string;
+    excerpt: string;
+    featuredImage: {
+      url: string;
+    };
+    id: string;
+    slug: string;
+    title: string;
   };
-  createdAt: string;
-  excerpt: string;
-  featuredImage: {
-    url: string;
-  };
-  id: string;
-  slug: string;
-  title: string;
 }

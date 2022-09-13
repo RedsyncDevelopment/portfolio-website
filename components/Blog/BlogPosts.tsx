@@ -10,12 +10,12 @@ const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
   const { data, isLoading } = useQuery(["posts"], () => fetchAllPosts());
 
   if (!data) return null;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="py-16">Loading...</div>;
 
-  if (data.length === 0) return <div>No posts</div>;
+  if (data.length === 0) return <div className="py-16">No posts</div>;
 
   return (
-    <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+    <div className="py-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-16">
       {data?.map(({ node: post }) => (
         <PostWrapper key={post.title} post={post} />
       ))}
