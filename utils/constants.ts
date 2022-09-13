@@ -61,5 +61,5 @@ export const fetchPost = async (slug?: string | string[]): Promise<Post> => {
     POST,
     { slug }
   );
-  return response;
+  return response.post;
 };
