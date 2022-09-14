@@ -9,6 +9,8 @@ interface BlogPostsProps {}
 const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
   const { data, isLoading } = useQuery(["posts"], () => fetchAllPosts());
 
+  console.log(isLoading);
+
   if (!data) return null;
   if (isLoading) return <div className="py-16">Loading...</div>;
 
@@ -31,6 +33,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
+      revalidate: 60 * 60 * 24,
     },
   };
 };
