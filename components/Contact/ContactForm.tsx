@@ -31,7 +31,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
       data,
     });
 
-    console.log(response);
     if (response.status === 200) {
       setMessage(response.data.message);
     } else {
