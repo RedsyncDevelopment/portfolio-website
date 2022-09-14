@@ -30,9 +30,11 @@ export default async function handler(
       html: `<div>Name: ${req.body.data.name}</div><div>Company: ${req.body.data.company}</div><div>Message: ${req.body.data.message}</div><p>Sent from:
     ${req.body.data.email}</p>`,
     };
-    transporter.sendMail(mailData, function (err: any, info: any) {
-      if (err) console.log(err);
-      else console.log(info);
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailData, function (err: any, info: any) {
+        if (err) console.log(err);
+        else console.log(info);
+      });
     });
 
     return res.status(200).json({ message: "Message sent successfully!" });
