@@ -30,7 +30,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   await queryClient.prefetchQuery(["posts"], () => fetchAllPosts());
   return {
     props: {
-      revalidate: 100, // 1 day in seconds
       dehydratedState: dehydrate(queryClient),
     },
   };
