@@ -1,7 +1,7 @@
 import React from "react";
 
 interface SinglePostDetailsProps {
-  createdAt: string;
+  createdAt?: string;
   category: string;
 }
 
@@ -17,13 +17,15 @@ const SinglePostDetails: React.FC<SinglePostDetailsProps> = ({
       </div>
       <div className="flex flex-col">
         <span>Date: </span>
-        <span>
-          {new Date(createdAt).toLocaleDateString("en-US", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-          })}
-        </span>
+        {createdAt && (
+          <span>
+            {new Date(createdAt).toLocaleDateString("en-US", {
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+            })}
+          </span>
+        )}
       </div>
     </aside>
   );

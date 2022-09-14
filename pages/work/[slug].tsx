@@ -9,17 +9,19 @@ import SinglePostExcerpt from "../../components/Blog/SinglePost/SinglePostExcerp
 import SinglePostHeading from "../../components/Blog/SinglePost/SinglePostHeading";
 import SinglePostImage from "../../components/Blog/SinglePost/SinglePostImage";
 import PageLayout from "../../components/Layout/PageLayout";
-import { fetchAllPosts, fetchPost } from "../../utils/constants";
+import { fetchAllProjects, fetchProject } from "../../utils/constants";
 
-interface BlogPostProps {
+interface ProjectPostProps {
   children?: ReactNode;
 }
 
-const BlogPost: NextPage<BlogPostProps> = (props) => {
+const ProjectPost: NextPage<ProjectPostProps> = (props) => {
   const { query } = useRouter();
 
   // Syncronizing data with Server
-  const { data, isLoading } = useQuery(["post"], () => fetchPost(query.slug));
+  const { data, isLoading } = useQuery(["project"], () =>
+    fetchProject(query.slug)
+  );
 
   if (!data) return null;
   if (isLoading) return <div className="py-16">Loading...</div>;
@@ -41,10 +43,10 @@ const BlogPost: NextPage<BlogPostProps> = (props) => {
   );
 };
 
-export default BlogPost;
+export default ProjectPost;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await fetchAllPosts();
+  const posts = await fetchAllProjects();
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: false,
@@ -53,7 +55,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryClient = new QueryClient();
-  await queryClient.prefetchQuery(["post"], () => fetchPost(params?.slug));
+  await queryClient.prefetchQuery(["project"], () =>
+    fetchProject(params?.slug)
+  );
   return {
     props: {
       dehydratedState: dehydrate(queryClient),

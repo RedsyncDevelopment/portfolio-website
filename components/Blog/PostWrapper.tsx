@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { PostNode } from "../../types";
 
@@ -10,6 +11,8 @@ interface PostWrapperProps {
 const PostWrapper: React.FC<PostWrapperProps> = ({
   post: { title, slug, excerpt, category, featuredImage, createdAt },
 }) => {
+  const { pathname } = useRouter();
+
   const created = new Date(createdAt).toLocaleDateString("en-US", {
     day: "2-digit",
     month: "long",
@@ -17,7 +20,7 @@ const PostWrapper: React.FC<PostWrapperProps> = ({
   });
 
   return (
-    <Link href={`blog/${slug}`}>
+    <Link href={`${pathname}/${slug}`}>
       <a
         className={`border-2 p-6 border-primary-blue-400 dark:hover:bg-secondary-gray-700 hover:bg-secondary-gray-200 shadow-md`}
       >
@@ -33,7 +36,7 @@ const PostWrapper: React.FC<PostWrapperProps> = ({
           <div className="flex flex-col gap-6 pt-8">
             <div className="flex justify-between px-4 text-sm text-secondary-gray-400">
               <div>{category.name}</div>
-              <div>{created}</div>
+              {createdAt && <div>{created}</div>}
             </div>
             <h2 className="text-center text-xl px-4">{title}</h2>
             <p>{excerpt}</p>

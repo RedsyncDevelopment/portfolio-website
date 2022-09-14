@@ -34,7 +34,7 @@ export interface Post {
       children: any;
     };
   };
-  createdAt: string;
+  createdAt?: string;
   excerpt: string;
   featuredImage: {
     url: string;

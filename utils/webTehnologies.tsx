@@ -35,7 +35,7 @@ export const TEHNOLOGIES_LIST = [
       { name: "HTML5", icon: <SiHtml5 className="tehnologyIcon" /> },
       { name: "CSS", icon: <SiCss3 className="tehnologyIcon" /> },
       { name: "Tailwind", icon: <SiTailwindcss className="tehnologyIcon" /> },
-      { name: "REST API", icon: <SiJson className="tehnologyIcon" /> },
+
       { name: "GraphQL", icon: <SiGraphql className="tehnologyIcon" /> },
     ],
   },
@@ -46,6 +46,7 @@ export const TEHNOLOGIES_LIST = [
       { name: "Express", icon: <SiExpress className="tehnologyIcon" /> },
       { name: "NestJS", icon: <SiNestjs className="tehnologyIcon" /> },
       { name: "Python", icon: <SiPython className="tehnologyIcon" /> },
+      { name: "REST API", icon: <SiJson className="tehnologyIcon" /> },
       { name: "Postman", icon: <SiPostman className="tehnologyIcon" /> },
     ],
   },
