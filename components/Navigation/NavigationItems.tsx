@@ -18,7 +18,7 @@ const NavigationItems = () => {
   return (
     <div className="flex flex-col gap-4 xl:gap-6 items-center">
       <nav>
-        <ul className="font-semibold xl:text-xl text-md flex flex-col gap-4 xl:gap-6 items-center text-secondary-gray-400">
+        <ul className="font-semibold xl:text-xl text-md flex flex-col gap-4  items-center text-secondary-gray-400">
           {NAVIGATION.map((item) => (
             <NavigationListItems key={item.id} item={item} />
           ))}
