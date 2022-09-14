@@ -15,7 +15,7 @@ interface SkillsProps {
 }
 
 const Skills: NextPage<SkillsProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   const languageRef = useRef<HTMLDivElement>(null);
   const managmentRef = useRef<HTMLDivElement>(null);

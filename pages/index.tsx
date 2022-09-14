@@ -5,7 +5,7 @@ import Cube from "../components/UI/Cube";
 import useDeviceWidth from "../hooks/useDeviceWidth";
 
 const Home: NextPage = () => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <div className="lg:h-screen lg:flex">

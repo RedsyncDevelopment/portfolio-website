@@ -13,7 +13,7 @@ interface ContactProps {
 }
 
 const Contact: NextPage<ContactProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <PageLayout>

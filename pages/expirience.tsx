@@ -12,7 +12,7 @@ interface ExpirienceProps {
 }
 
 const Expirience: NextPage<ExpirienceProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <PageLayout>

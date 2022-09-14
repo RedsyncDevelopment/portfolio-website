@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function useDeviceWidth() {
   const [windowSize, setWindowSize] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     setWindowSize(window.innerWidth);
@@ -31,5 +31,5 @@ export default function useDeviceWidth() {
     };
   }, [windowSize]);
 
-  return isMobile;
+  return { isMobile, windowSize };
 }

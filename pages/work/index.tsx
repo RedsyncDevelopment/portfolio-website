@@ -15,7 +15,7 @@ interface WorkProps {
 }
 
 const Work: NextPage<WorkProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   const backendRef = useRef<HTMLDivElement>(null);
   const fullstackRef = useRef<HTMLDivElement>(null);

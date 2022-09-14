@@ -12,7 +12,7 @@ interface EducationProps {
 }
 
 const Education: NextPage<EducationProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <PageLayout>

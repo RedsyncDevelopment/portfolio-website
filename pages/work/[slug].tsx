@@ -49,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await fetchAllProjects();
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 

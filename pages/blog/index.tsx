@@ -12,7 +12,7 @@ interface BlogProps {
 }
 
 const Blog: NextPage<BlogProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <PageLayout>

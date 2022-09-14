@@ -15,7 +15,7 @@ interface AboutProps {
 }
 
 const About: NextPage<AboutProps> = ({ children }) => {
-  const isMobile = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   const hobbiesRef = useRef<HTMLDivElement>(null);
   const interestsRef = useRef<HTMLDivElement>(null);
