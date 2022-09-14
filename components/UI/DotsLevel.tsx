@@ -9,8 +9,9 @@ const DotsLevel: React.FC<DotsLevelProps> = ({ numberOfDots, type }) => {
   const divRef = useRef<HTMLDivElement>(null);
 
   divRef.current?.childNodes.forEach((node, i) => {
+    const nodeEl = node as HTMLElement;
     if (i < numberOfDots) {
-      node.classList.add("bg-secondary-gray-400");
+      nodeEl.classList.add("bg-secondary-gray-400");
     }
   });
 
