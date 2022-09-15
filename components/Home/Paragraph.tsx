@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Paragraph = () => {
   return (
-    <h2 className="text-xl leading-relaxed xl:text-3xl xl:leading-relaxed font-semibold text-secondary-gray-400 pt-16 xl:pr-24 md:pr-16 pr-8 h-[280px] lg:h-full lg:pb-16">
+    <h2 className="text-xl leading-relaxed xl:text-3xl xl:leading-relaxed font-semibold text-secondary-gray-400 pt-16 xl:pr-24 md:pr-16 pr-8 h-[300px] lg:h-[380px] lg:pb-16">
       Full-stack Developer with main focus on front-end part - buildind apps
       with <span className="text-primary-blue-400">React</span>, but I also like
       to dive into{" "}

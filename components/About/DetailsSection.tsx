@@ -1,12 +1,7 @@
-import React, { ReactNode } from "react";
 import { BsArrowBarRight } from "react-icons/bs";
 import SectionWrapper from "../UI/SectionWrapper";
 
-interface DetailsSectionProps {
-  children?: ReactNode;
-}
-
-const DetailsSection: React.FC<DetailsSectionProps> = ({ children }) => {
+const DetailsSection = ({}) => {
   return (
     <>
       <h3 className="heading3">DETAILS:</h3>

@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { ReactNode, useRef } from "react";
 import EducationHeading from "../components/Education/EducationHeading";
 import EducationHistory from "../components/Education/EducationHistory";
 import PageLayout from "../components/Layout/PageLayout";
@@ -7,11 +6,7 @@ import SectionLayout from "../components/Layout/SectionLayout";
 import CubeOtherPages from "../components/UI/CubeOtherPages";
 import useDeviceWidth from "../hooks/useDeviceWidth";
 
-interface EducationProps {
-  children?: ReactNode;
-}
-
-const Education: NextPage<EducationProps> = ({ children }) => {
+const Education: NextPage = () => {
   const { isMobile } = useDeviceWidth();
 
   return (

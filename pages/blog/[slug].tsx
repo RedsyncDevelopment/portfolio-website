@@ -1,7 +1,6 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
-import { ReactNode } from "react";
 import BackButton from "../../components/Blog/SinglePost/BackButton";
 import SinglePostContent from "../../components/Blog/SinglePost/SinglePostContent";
 import SinglePostDetails from "../../components/Blog/SinglePost/SinglePostDetails";
@@ -11,11 +10,7 @@ import SinglePostImage from "../../components/Blog/SinglePost/SinglePostImage";
 import PageLayout from "../../components/Layout/PageLayout";
 import { fetchAllPosts, fetchPost } from "../../utils/constants";
 
-interface BlogPostProps {
-  children?: ReactNode;
-}
-
-const BlogPost: NextPage<BlogPostProps> = (props) => {
+const BlogPost: NextPage = () => {
   const { query } = useRouter();
 
   // Syncronizing data with Server

@@ -1,22 +1,19 @@
-import React, { ReactNode } from "react";
 import { BsLinkedin } from "react-icons/bs";
 
-interface ContactInformationProps {
-  children?: ReactNode;
-}
-
-const ContactInformation: React.FC<ContactInformationProps> = ({
-  children,
-}) => {
+const ContactInformation = () => {
   return (
     <div className="md:text-xl flex flex-col gap-6">
       <div>
         <h3>Email Address: </h3>
-        <a href="mailto:ivan@redsync.studio">ivan@redsync.studio</a>
+        <a href="mailto:ivan@redsync.studio">
+          <em>ivan@redsync.studio</em>
+        </a>
       </div>
       <div>
         <h3>Phone: </h3>
-        <a href="tel:+385916126544">(+385) 91 / 6126 - 544</a>
+        <a href="tel:+385916126544">
+          <em>(+385) 91 / 6126 - 544</em>
+        </a>
       </div>
       <div>
         <p>Connect with me on:</p>

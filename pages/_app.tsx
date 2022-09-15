@@ -5,6 +5,7 @@ import {
 } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import Navigation from "../components/Navigation/Navigation";
@@ -19,6 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Hydrate state={pageProps.dehydratedState}>
           <ThemeProvider enableSystem={true} attribute="class">
             <div className="flex flex-col lg:flex-row flex-grow w-full ">
+              <Head>
+                <title>Portfolio - Ivan Horvat</title>
+              </Head>
               <Navigation />
               <Layout>
                 <Component {...pageProps} />

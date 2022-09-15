@@ -1,10 +1,6 @@
 import axios from "axios";
-import React, { ReactNode, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-
-interface ContactFormProps {
-  children?: ReactNode;
-}
 
 interface Inputs {
   name: string;
@@ -14,7 +10,7 @@ interface Inputs {
   example: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
+const ContactForm = () => {
   const {
     register,
     handleSubmit,

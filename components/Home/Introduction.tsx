@@ -3,11 +3,7 @@ import React, { ReactNode } from "react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import Paragraph from "./Paragraph";
 
-interface IntroductionProps {
-  children?: ReactNode;
-}
-
-const Introduction: React.FC<IntroductionProps> = ({ children }) => {
+const Introduction = () => {
   return (
     <div className="lg:pt-20 pt-10 w-full pl-8 md:pl-24 xl:pl-32">
       <h1 className="text-secondary-gray-400 text-6xl xl:text-8xl font-bold leading-relaxed xl:leading-relaxed">

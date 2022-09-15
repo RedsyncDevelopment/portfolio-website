@@ -1,12 +1,7 @@
-import React, { ReactNode } from "react";
 import ExpirienceDetails from "../UI/ExpirienceDetails";
 import SectionWrapper from "../UI/SectionWrapper";
 
-interface EducationHistoryProps {
-  children?: ReactNode;
-}
-
-const EducationHistory: React.FC<EducationHistoryProps> = ({ children }) => {
+const EducationHistory = () => {
   return (
     <section className="2xl:pr-60">
       <h3 className="heading3">EDUCATION</h3>

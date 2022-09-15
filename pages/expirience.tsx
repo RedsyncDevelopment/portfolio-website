@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { ReactNode } from "react";
 import ExpirienceHeading from "../components/Expirience/ExpirienceHeading";
 import ExpirienceHistory from "../components/Expirience/ExpirienceHistory";
 import PageLayout from "../components/Layout/PageLayout";
@@ -7,11 +6,7 @@ import SectionLayout from "../components/Layout/SectionLayout";
 import CubeOtherPages from "../components/UI/CubeOtherPages";
 import useDeviceWidth from "../hooks/useDeviceWidth";
 
-interface ExpirienceProps {
-  children?: ReactNode;
-}
-
-const Expirience: NextPage<ExpirienceProps> = ({ children }) => {
+const Expirience: NextPage = () => {
   const { isMobile } = useDeviceWidth();
 
   return (

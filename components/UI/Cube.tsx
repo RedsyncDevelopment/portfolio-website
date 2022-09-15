@@ -27,7 +27,6 @@ const Cube: React.FC = ({}) => {
       <ambientLight />
       <group>
         <Box position={[0, 0, 0]} ref={myMesh} args={[2.5, 2.5, 2.5]}>
-          <ambientLight />
           <meshBasicMaterial attach="material-0" map={home} />
           <meshBasicMaterial attach="material-1" map={about} />
           <meshBasicMaterial attach="material-2" map={skills} />

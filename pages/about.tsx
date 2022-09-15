@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import AboutHeading from "../components/About/AboutHeading";
 import HobbiesSection from "../components/About/HobbiesSection";
 import InterestsSection from "../components/About/InterestsSection";
@@ -10,11 +10,7 @@ import CubeOtherPages from "../components/UI/CubeOtherPages";
 import Splitter from "../components/UI/Splitter";
 import useDeviceWidth from "../hooks/useDeviceWidth";
 
-interface AboutProps {
-  children?: ReactNode;
-}
-
-const About: NextPage<AboutProps> = ({ children }) => {
+const About: NextPage = () => {
   const { isMobile } = useDeviceWidth();
 
   const hobbiesRef = useRef<HTMLDivElement>(null);

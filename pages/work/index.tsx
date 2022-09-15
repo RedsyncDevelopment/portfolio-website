@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import PageLayout from "../../components/Layout/PageLayout";
 import SectionLayout from "../../components/Layout/SectionLayout";
 import CubeOtherPages from "../../components/UI/CubeOtherPages";
@@ -10,11 +10,7 @@ import ManagmentSection from "../../components/Work/Managment/ManagmentSection";
 import Workheading from "../../components/Work/WorkHeading";
 import useDeviceWidth from "../../hooks/useDeviceWidth";
 
-interface WorkProps {
-  children?: ReactNode;
-}
-
-const Work: NextPage<WorkProps> = ({ children }) => {
+const Work: NextPage = () => {
   const { isMobile } = useDeviceWidth();
 
   const backendRef = useRef<HTMLDivElement>(null);

@@ -1,12 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { ReactNode } from "react";
 
-interface NotFoundProps {
-  children?: ReactNode;
-}
-
-const NotFound: NextPage<NotFoundProps> = ({ children }) => {
+const NotFound: NextPage = () => {
   return (
     <>
       <div className="w-full h-screen flex items-center justify-center">

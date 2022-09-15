@@ -31,7 +31,7 @@ export interface Post {
   };
   content?: {
     raw: {
-      children: any;
+      children: ElementNode[];
     };
   };
   createdAt?: string;

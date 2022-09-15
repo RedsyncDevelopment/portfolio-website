@@ -3,7 +3,7 @@ import DesktopNavigation from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 
 const Navigation = () => {
-  const { isMobile, windowSize } = useDeviceWidth();
+  const { isMobile } = useDeviceWidth();
 
   return (
     <header id="navheader" className="lg:w-1/4 w-screen">

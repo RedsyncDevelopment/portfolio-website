@@ -1,13 +1,8 @@
-import React, { ReactNode } from "react";
 import SectionWrapper from "../UI/SectionWrapper";
 import OtherInfoSkills from "./DigitalSkills/OtherInfoSkills";
 import WebDevelopment from "./DigitalSkills/WebDevelopment";
 
-interface DigitalSkillsProps {
-  children?: ReactNode;
-}
-
-const DigitalSkills: React.FC<DigitalSkillsProps> = ({ children }) => {
+const DigitalSkills = () => {
   return (
     <section className="2xl:pr-60">
       <h3 className="heading3">DIGITAL SKILLS:</h3>

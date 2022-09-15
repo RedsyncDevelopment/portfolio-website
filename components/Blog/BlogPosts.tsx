@@ -1,15 +1,10 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
 import { GetStaticProps } from "next";
-import React from "react";
 import { fetchAllPosts } from "../../utils/constants";
 import PostWrapper from "./PostWrapper";
 
-interface BlogPostsProps {}
-
-const BlogPosts: React.FC<BlogPostsProps> = ({}) => {
+const BlogPosts = () => {
   const { data, isLoading } = useQuery(["posts"], () => fetchAllPosts());
-
-  console.log(isLoading);
 
   if (!data) return null;
   if (isLoading) return <div className="py-16">Loading...</div>;

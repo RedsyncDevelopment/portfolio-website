@@ -1,11 +1,6 @@
-import React, { ReactNode } from "react";
 import SectionWrapper from "../UI/SectionWrapper";
 
-interface ManagmentSkillsProps {
-  children?: ReactNode;
-}
-
-const ManagmentSkills: React.FC<ManagmentSkillsProps> = ({ children }) => {
+const ManagmentSkills = () => {
   return (
     <section className="2xl:pr-60">
       <h3 className="heading3">MANAGMENT SKILLS:</h3>

@@ -1,9 +1,6 @@
-import React from "react";
 import SectionWrapper from "../UI/SectionWrapper";
 
-interface InterestsSectionProps {}
-
-const InterestsSection: React.FC<InterestsSectionProps> = ({}) => {
+const InterestsSection = () => {
   return (
     <>
       <section className="pb-20 2xl:pr-72">

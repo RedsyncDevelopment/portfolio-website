@@ -41,6 +41,7 @@ const MobileNavigation = () => {
           onClick={handleOpen}
         >
           <Canvas camera={{ position: [0, 0, 4] }} flat>
+            <ambientLight />
             <Cube />
           </Canvas>
         </button>

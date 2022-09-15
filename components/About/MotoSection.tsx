@@ -1,10 +1,4 @@
-import React, { ReactNode } from "react";
-
-interface MotoSectionProps {
-  children?: ReactNode;
-}
-
-const MotoSection: React.FC<MotoSectionProps> = ({ children }) => {
+const MotoSection = () => {
   return (
     <>
       <section>
