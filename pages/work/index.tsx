@@ -3,7 +3,6 @@ import { useRef } from "react";
 import PageLayout from "../../components/Layout/PageLayout";
 import SectionLayout from "../../components/Layout/SectionLayout";
 import CubeOtherPages from "../../components/UI/CubeOtherPages";
-import BackendSection from "../../components/Work/Backend/BackendSection";
 import FrontendSection from "../../components/Work/Frontend/FrontendSection";
 import FullstackSection from "../../components/Work/Fullstack/FullstackSection";
 import ManagmentSection from "../../components/Work/Managment/ManagmentSection";
@@ -26,11 +25,11 @@ const Work: NextPage = () => {
       <SectionLayout>
         <FrontendSection />
       </SectionLayout>
-      <div ref={backendRef}>
+      {/* <div ref={backendRef}>
         <SectionLayout>
           <BackendSection />
         </SectionLayout>
-      </div>
+      </div> */}
       <div ref={fullstackRef}>
         <SectionLayout>
           <FullstackSection />
