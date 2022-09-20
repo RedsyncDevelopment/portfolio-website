@@ -38,7 +38,9 @@ const PostWrapper: React.FC<PostWrapperProps> = ({
               <div>{category.name}</div>
               {createdAt && <div>{created}</div>}
             </div>
-            <h2 className="text-center text-xl px-4">{title}</h2>
+            <h2 className="text-center text-black dark:text-white text-xl px-4">
+              {title}
+            </h2>
             <p>{excerpt}</p>
           </div>
         </article>

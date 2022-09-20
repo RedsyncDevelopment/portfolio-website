@@ -8,7 +8,7 @@ interface SinglePostImageProps {
 
 const SinglePostImage: React.FC<SinglePostImageProps> = ({ url, alt }) => {
   return (
-    <div className="relative w-96 h-60 md:w-[500px] xl:w-[800px] xl:h-96">
+    <div className="relative w-80 h-44 md:w-[500px] md:h-[340px] xl:w-[800px] xl:h-[480px]">
       <Image src={url} alt={alt} layout="fill" objectFit="cover" />
     </div>
   );

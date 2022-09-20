@@ -12,7 +12,7 @@ interface SinglePostContentProps {
 
 const SinglePostContent: React.FC<SinglePostContentProps> = ({ post }) => {
   return (
-    <div className="w-full">
+    <div className="w-full xl:w-4/5 flex flex-col xl:p-20 xl:border-2 border-secondary-gray-400 dark:border-secondary-gray-200">
       {!!post.content && (
         <RichText
           content={post.content.raw}
@@ -43,7 +43,16 @@ const SinglePostContent: React.FC<SinglePostContentProps> = ({ post }) => {
             ),
             code_block: ({ children }) => <CodeBlock>{children}</CodeBlock>,
             img: ({ src, altText, height, width }) => (
-              <Image alt={altText} height={height} width={width} src={src!} />
+              <div className="self-center relative w-80 h-44 md:w-[500px] md:h-[340px] xl:w-[800px] xl:h-[480px]">
+                <Image
+                  alt={altText}
+                  height={height}
+                  width={width}
+                  src={src!}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             ),
             bold: ({ children }) => <strong>{children}</strong>,
             italic: ({ children }) => <em>{children}</em>,
