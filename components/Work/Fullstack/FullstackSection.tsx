@@ -4,7 +4,7 @@ import FullstackPosts from "./FullstackPosts";
 const FullstackSection = () => {
   return (
     <section className="2xl:pr-60">
-      <h3 className="heading3">FULLSTACK PROJECTS:</h3>
+      <h3 className="heading3">FULL-STACK PROJECTS:</h3>
       <SectionWrapper paragraphContent={<FullstackPosts />} />
     </section>
   );
