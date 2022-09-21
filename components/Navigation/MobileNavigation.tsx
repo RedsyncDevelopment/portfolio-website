@@ -27,7 +27,7 @@ const MobileNavigation = () => {
 
   return (
     <>
-      <div className="h-14 w-full flex items-center px-8 md:px-24 justify-between relative">
+      <div className="h-14 w-full flex items-center px-8 md:px-24 justify-between relative lg:hidden">
         <p className="flex items-center gap-2 font-semibold">
           <span>Click on</span>
           <span>
