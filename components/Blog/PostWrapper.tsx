@@ -26,12 +26,14 @@ const PostWrapper: React.FC<PostWrapperProps> = ({
       >
         <article>
           <div className="flex justify-center">
-            <Image
-              src={featuredImage.url}
-              alt={excerpt}
-              width={200}
-              height={150}
-            />
+            {featuredImage && (
+              <Image
+                src={featuredImage.url}
+                alt={excerpt}
+                width={200}
+                height={150}
+              />
+            )}
           </div>
           <div className="flex flex-col gap-6 pt-8">
             <div className="flex justify-between px-4 text-sm text-secondary-gray-400">

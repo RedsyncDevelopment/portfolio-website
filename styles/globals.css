@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply !scrollbar-hide;
+    @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-primary-blue-400;
   }
 }
 
