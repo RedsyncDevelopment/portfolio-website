@@ -6,7 +6,7 @@ interface ExpirienceDetailsProps {
   heading: string;
   companyName: string;
   companyType: string;
-  address: string;
+  address?: string;
   linkHref?: string;
   linkDescription?: string;
 }
@@ -46,15 +46,17 @@ const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
           </div>
           <span>{companyName}</span>
         </WrapperDiv>
-        <WrapperDiv>
-          <div className="flex gap-2 items-center">
-            <span>
-              <FaEnvelope />
-            </span>
-            <span>Address: </span>
-          </div>
-          <address>{address}</address>
-        </WrapperDiv>
+        {address && (
+          <WrapperDiv>
+            <div className="flex gap-2 items-center">
+              <span>
+                <FaEnvelope />
+              </span>
+              <span>Address: </span>
+            </div>
+            <address>{address}</address>
+          </WrapperDiv>
+        )}
         {!!linkHref && (
           <WrapperDiv>
             <div className="flex gap-2 items-center">

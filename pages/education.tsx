@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Certificates from "../components/Education/Certificates";
 import EducationHeading from "../components/Education/EducationHeading";
 import EducationHistory from "../components/Education/EducationHistory";
 import PageLayout from "../components/Layout/PageLayout";
@@ -15,9 +16,14 @@ const Education: NextPage = () => {
         <EducationHeading />
         {!isMobile && <CubeOtherPages />}
       </SectionLayout>
+
+      <SectionLayout>
+        <EducationHistory />
+      </SectionLayout>
+
       <div className="pb-16">
         <SectionLayout>
-          <EducationHistory />
+          <Certificates />
         </SectionLayout>
       </div>
     </PageLayout>
