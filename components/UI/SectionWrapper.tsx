@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 interface SectionWrapperProps {
   paragraphName?: string;
   paragraphNumber?: string;
-  paragraphContent?: string | ReactNode;
+  paragraphContent?: string | ReactNode | ReactNode[];
 }
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({

@@ -1,14 +1,15 @@
 import React, { ReactNode } from "react";
-import { FaBuilding, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { FaBuilding, FaCheckSquare, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 interface ExpirienceDetailsProps {
-  yearsSpan: string;
+  yearsSpan?: string;
   heading: string;
   companyName: string;
   companyType: string;
   address?: string;
   linkHref?: string;
   linkDescription?: string;
+  certificate?: boolean;
 }
 
 interface WrapperDivInterface {
@@ -29,14 +30,15 @@ const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
   linkHref,
   linkDescription,
   companyType,
+  certificate,
 }) => {
   return (
-    <div>
+    <div className="py-6">
       <div className="flex gap-2">
         <time>{yearsSpan}</time>
         <h3 className="text-primary-blue-400">{heading}</h3>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col text-md">
         <WrapperDiv>
           <div className="flex gap-2 items-center">
             <span>
@@ -57,24 +59,42 @@ const ExpirienceDetails: React.FC<ExpirienceDetailsProps> = ({
             <address>{address}</address>
           </WrapperDiv>
         )}
-        {!!linkHref && (
-          <WrapperDiv>
-            <div className="flex gap-2 items-center">
-              <span>
-                <FaGlobe />
-              </span>
-              <span>Website: </span>
-            </div>
-            <a
-              target="_blank"
-              href={linkHref}
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              {linkDescription}
-            </a>
-          </WrapperDiv>
-        )}
+        {!!linkHref &&
+          (certificate ? (
+            <WrapperDiv>
+              <div className="flex gap-2 items-center">
+                <span>
+                  <FaCheckSquare />
+                </span>
+                <span>Certificate: </span>
+              </div>
+              <a
+                target="_blank"
+                href={linkHref}
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                {linkDescription}
+              </a>
+            </WrapperDiv>
+          ) : (
+            <WrapperDiv>
+              <div className="flex gap-2 items-center">
+                <span>
+                  <FaGlobe />
+                </span>
+                <span>Website: </span>
+              </div>
+              <a
+                target="_blank"
+                href={linkHref}
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                {linkDescription}
+              </a>
+            </WrapperDiv>
+          ))}
       </div>
     </div>
   );
