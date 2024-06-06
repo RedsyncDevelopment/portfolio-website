@@ -24,9 +24,7 @@ const MotoSection = () => {
             with main focus on{" "}
             <span className="text-black dark:text-white">React</span> library.
             Although I mostly work with React and NextJS I like to dive into
-            Back-end Development too. After a few years working as a Project
-            Manager I have decided to start my own company and work as a
-            contractor.
+            Back-end Development too.
           </p>
         </div>
       </section>

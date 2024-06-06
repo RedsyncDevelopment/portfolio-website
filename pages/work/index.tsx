@@ -22,6 +22,11 @@ const Work: NextPage = () => {
         <Workheading />
         {!isMobile && <CubeOtherPages />}
       </SectionLayout>
+      <div ref={fullstackRef}>
+        <SectionLayout>
+          <FullstackSection />
+        </SectionLayout>
+      </div>
       <SectionLayout>
         <FrontendSection />
       </SectionLayout>
@@ -30,11 +35,6 @@ const Work: NextPage = () => {
           <BackendSection />
         </SectionLayout>
       </div> */}
-      <div ref={fullstackRef}>
-        <SectionLayout>
-          <FullstackSection />
-        </SectionLayout>
-      </div>
       <div ref={managmentRef} className="pb-16">
         <SectionLayout>
           <ManagmentSection />
